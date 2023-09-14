@@ -1,0 +1,33 @@
+.card{
+    width:250px;
+    height: 330px;
+    border: 1px solid rgb(255, 0, 0);
+}
+.photo{
+    width: 80px;
+    border-radius: 50px;
+}
+.info{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-btn{
+    background-color: aqua;
+}
+.home-container{
+    display: flex;
+}
+.card-container{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    
+}
+
+h2{
+    color: black;
+}
+p{
+    color: grey;
+}
