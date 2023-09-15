@@ -8,7 +8,7 @@ const Cart = () => {
   
 
   return (
-    <div>
+    <div className="cart-container">
       <h3>Credit Hour Remaining: </h3>
       <h2>Course Name</h2>
       <p>Total Credit Hour:</p>
