@@ -1,33 +1,50 @@
 .card{
-    width:250px;
-    height: 330px;
-    border: 1px solid rgb(255, 0, 0);
+    width:240px;
+    height: 430px;
+    background-color: white;
+    border-radius: 15px;
 }
 .photo{
-    width: 80px;
-    border-radius: 50px;
+    width: 240px;
+    
 }
 .info{
     display: flex;
     justify-content: space-evenly;
+    text-align: start;
+    gap: 15px;
+    margin-top: -10px;
+   
+    
+}
+.price{
+    text-align: left;
 }
 .card-btn{
-    background-color: aqua;
+    background-color: #2F80ED;
+    padding: 10px 90px ;
 }
 .home-container{
     display: flex;
+    
 }
 .card-container{
-    width: 600px;
+    width: 1000px;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 17px;
+    margin-top: 30px;
+    
     
 }
 
 h2{
     color: black;
+    text-align: left;
+    font-size: 20px;
 }
 p{
+    text-align: left;
+    font-size: 18px;
     color: grey;
 }

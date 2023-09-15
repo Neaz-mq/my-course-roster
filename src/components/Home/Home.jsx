@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
-//import Cart from "../Cart/Cart";
+
 import "./Home.css";
 import { useState } from "react";
+import Cart from './Cart/Cart';
 
 const Home = () => {
   const [allCourses, setAllCourses] = useState([]);
@@ -33,17 +34,21 @@ const Home = () => {
                 </small>
               </p>
               <div className="info">
-                <p>$ Price: {course.price} </p>
+                <p className='price'>$ Price: {course.price} </p>
                 <p> Credit: {course.credit}hr</p>
               </div>
-              {/* <button
-                onClick={() => handleSelectActor(actor)}
+              <button
+                // onClick={() => handleSelectActor(actor)}
                 className="card-btn"
               >
                 Select
-              </button> */}
+              </button>
             </div>
           ))}
+        </div>
+        <div className='cart'>
+        
+        <Cart></Cart>
         </div>
         
       </div>
