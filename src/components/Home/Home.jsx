@@ -7,6 +7,8 @@ import Cart from './Cart/Cart';
 const Home = () => {
   const [allCourses, setAllCourses] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
+  const [totalCredit, setTotalCredit] = useState(0);
+
 
   useEffect(() =>{
     fetch("./data.json")
@@ -15,10 +17,21 @@ const Home = () => {
   }, []);
 
   const handleSelectCourse = (course) => {
-    
+    const isExist = selectedCourses.find((item) => item.id == course.id);
+  
+    let credit = course.credit;
+
+    if (isExist) {
+      return alert("already booked");
+    } else {
+      selectedCourses.forEach((item) => {
+        credit = credit + item.credit;
+      });
+      setTotalCredit(credit);
     setSelectedCourses([...selectedCourses, course]);
-     
-  };
+  }
+};
+
 
   return (
     
@@ -56,6 +69,7 @@ const Home = () => {
         
         <Cart
         selectedCourses={selectedCourses}
+        totalCredit={totalCredit}
         
         ></Cart>
         </div>
