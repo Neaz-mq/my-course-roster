@@ -8,6 +8,7 @@ const Home = () => {
   const [allCourses, setAllCourses] = useState([]);
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [totalCredit, setTotalCredit] = useState(0);
+  const [remaining, setRemaining] = useState(20);
 
 
   useEffect(() =>{
@@ -27,9 +28,17 @@ const Home = () => {
       selectedCourses.forEach((item) => {
         credit = credit + item.credit;
       });
+      const remaining = 20 - credit;
+        if (credit > 20) {
+
+          return alert("you can not add credit");
+          
+       } else {
       setTotalCredit(credit);
-    setSelectedCourses([...selectedCourses, course]);
+      setSelectedCourses([...selectedCourses, course]);
+      setRemaining(remaining);
   }
+}
 };
 
 
@@ -70,6 +79,7 @@ const Home = () => {
         <Cart
         selectedCourses={selectedCourses}
         totalCredit={totalCredit}
+        remaining={remaining}
         
         ></Cart>
         </div>
