@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
-
 import "./Home.css";
 import { useState } from "react";
 import Cart from './Cart/Cart';
@@ -14,6 +13,13 @@ const Home = () => {
      .then((res) => res.json())
       .then((data) => setAllCourses(data));
   }, []);
+
+  const handleSelectCourse = (course) => {
+    
+    setSelectedCourses([...selectedCourses, course]);
+     
+  };
+
   return (
     
     <div className="container">
@@ -38,7 +44,7 @@ const Home = () => {
                 <p> Credit: {course.credit}hr</p>
               </div>
               <button
-                // onClick={() => handleSelectActor(actor)}
+                 onClick={() => handleSelectCourse(course)}
                 className="card-btn"
               >
                 Select
@@ -48,7 +54,10 @@ const Home = () => {
         </div>
         <div className='cart'>
         
-        <Cart></Cart>
+        <Cart
+        selectedCourses={selectedCourses}
+        
+        ></Cart>
         </div>
         
       </div>

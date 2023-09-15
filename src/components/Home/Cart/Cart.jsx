@@ -4,13 +4,20 @@
 import React from "react";
 import "./Cart.css";
 
-const Cart = () => {
+const Cart = ({ selectedCourses}) => {
+
+  console.log(selectedCourses);
   
 
   return (
     <div className="cart-container">
       <h3>Credit Hour Remaining: </h3>
-      <h2>Course Name</h2>
+      <h2>Course Name : </h2>
+      {selectedCourses.map((course) => (
+       
+        <li key={course.id}>{course.name}</li>
+     
+      ))}
       <p>Total Credit Hour:</p>
     </div>
   );
