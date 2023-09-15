@@ -13,11 +13,14 @@ const Cart = ({ selectedCourses, totalCredit, remaining}) => {
     <div className="cart-container">
       <h3>Credit Hour Remaining {remaining} hr </h3>
       <h2>Course Name  </h2>
-      {selectedCourses.map((course) => (
-       
-        <li key={course.id}>{course.name}</li>
-     
+      <ul>
+      {selectedCourses.map((course,index) => (
+      
+      
+        <li key={course.id}>{index + 1}    {course.name}</li>
+        
       ))}
+      </ul>
       <p>Total Credit Hour: {totalCredit}</p>
       <p>Total Price : 48000 USD</p>
     </div>

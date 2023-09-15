@@ -36,6 +36,15 @@
     padding-bottom: 3px;
 }
 
-li{
-    color: black;
+ul{
+    list-style: none;
 }
+
+li{
+    color: rgb(87, 79, 79);
+    margin-right: 25px;
+    margin-left: -20px;
+    text-align: left;
+}
+
+
