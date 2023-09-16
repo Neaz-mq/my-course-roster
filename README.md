@@ -4,9 +4,11 @@ Question 1: Add at least 3 Project features.
 
 Answer: The three main common features of this project are given below: 
 
-The user can add the course easily and shows in Cart section.
-User can purchase maximum 20 hour credit course. User can select many course but according to credit he will purchase the course and the user can also see the remaining credit in the upper portion.
-If User selects a course twice he will get a toast in upper portion and he can not add twice a course. And also if he adding total 20 credit the course offer will finished. after 20 credit it will show a toast in a upper portion and he can not add according to limit.
+ * The user can add the course easily and shows in Cart section.
+
+ * User can purchase maximum 20 hour credit course. User can select many course but according to credit he will purchase the course and the user can also see the remaining credit in the upper portion.
+
+ * If User selects a course twice he will get a toast in upper portion and he can not add twice a course. And also if he adding total 20 credit the course offer will finished. after 20 credit it will show a toast in a upper portion and he can not add according to limit.
 
 
 
