@@ -5,6 +5,7 @@ import { useState } from "react";
 import Cart from './Cart/Cart';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { BiBookOpen } from "react-icons/bi";
 
 const Home = () => {
   const [allCourses, setAllCourses] = useState([]);
@@ -70,7 +71,7 @@ const Home = () => {
               </p>
               <div className="info">
                 <p className='price'>$ Price: {course.price} </p>
-                <p> Credit: {course.credit}hr</p>
+                <p ><small><BiBookOpen /></small> Credit: {course.credit}hr</p>
               </div>
               <button
                  onClick={() => handleSelectCourse(course)}
